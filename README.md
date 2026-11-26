@@ -1,4 +1,4 @@
-# Infected by ProperStyle 1.0.0
+# Infected by ProperStyle 1.1.0
 
 A Virus TI / Snow emulation as an instrument plugin for 64-bit Akai MPC standalone hardware.
 Free software (GPL-3.0). Polish version below / wersja polska niżej.
@@ -14,7 +14,8 @@ attached. It adds its own pages for the MPC's touch screen:
 - **MAIN**: bank, sound and the most used controls.
 - **BROWSE**: factory and user banks, sound lists, favourites (star a sound, find it under FAVS).
 - **LOOP**: a loop recorder that freezes the synth to audio in step with your sequence (the emulator stops, CPU is
-  freed). A bounce or resample of a frozen loop lands exactly on the grid.
+  freed). A bounce or resample of a frozen loop lands exactly on the grid. A frozen instance also unloads the
+  emulator after 3 seconds, so its memory is freed too; going back to LIVE boots it again (a few seconds).
 - **OSC, FILTER, ENV, LFO, FX 1, FX 2, MIX, ARP**: the sound parameters.
 - **ARP EDIT**: the Virus user arpeggiator pattern, 32 steps with velocity and length.
 - **SETUP**: emulation model (Snow / TI2), buffer, load meters, about.
@@ -74,7 +75,7 @@ Infected is free and will stay free. If you like it, you can buy me a coffee: **
   with **no warranty**; you use it at your own risk.
 - It is a modified version of **gearmulator** by The Usual Suspects (https://github.com/dsp56300/gearmulator) and
   uses dsp56300, AsmJit, libresample and inMusic's MPC Plugin SDK; full credits in `Content/CREDITS.txt`.
-- The complete source code of this release is published next to it (`infected-mpc-source-1.0.0.zip`), as the
+- The complete source code of this release is published next to it (`infected-mpc-source-1.1.0.zip`), as the
   GPL requires.
 - **No firmware is included or distributed.** The Virus firmware is Access Music's copyrighted work; supply your
   own copy.
@@ -93,7 +94,8 @@ MPC, bez komputera. Ma własne strony na ekran dotykowy MPC:
 - **MAIN**: bank, brzmienie i najczęściej używane parametry.
 - **BROWSE**: banki fabryczne i własne, listy brzmień, ulubione (gwiazdka przy brzmieniu, lista pod FAVS).
 - **LOOP**: looper, który zamraża syntezator do audio równo z sekwencją (emulator się zatrzymuje, procesor
-  odpoczywa). Zgranie lub resampling zamrożonej pętli trafia dokładnie w siatkę.
+  odpoczywa). Zgranie lub resampling zamrożonej pętli trafia dokładnie w siatkę. Po 3 sekundach zamrożona
+  instancja wyłącza też emulator i zwalnia jego pamięć; powrót do LIVE uruchamia go ponownie (kilka sekund).
 - **OSC, FILTER, ENV, LFO, FX 1, FX 2, MIX, ARP**: parametry brzmienia.
 - **ARP EDIT**: własny wzór arpeggiatora Virusa, 32 kroki z velocity i długością.
 - **SETUP**: model emulacji (Snow / TI2), bufor, wskaźniki obciążenia, informacje.
@@ -154,7 +156,7 @@ nie odblokowują.
   Jest dostarczany **bez żadnej gwarancji**; używasz go na własną odpowiedzialność.
 - Jest zmodyfikowaną wersją **gearmulatora** autorstwa The Usual Suspects (https://github.com/dsp56300/gearmulator)
   i korzysta z dsp56300, AsmJit, libresample oraz MPC Plugin SDK od inMusic; pełna lista w `Content/CREDITS.txt`.
-- Pełny kod źródłowy tego wydania jest opublikowany obok niego (`infected-mpc-source-1.0.0.zip`), jak wymaga GPL.
+- Pełny kod źródłowy tego wydania jest opublikowany obok niego (`infected-mpc-source-1.1.0.zip`), jak wymaga GPL.
 - **Paczka nie zawiera i nie rozpowszechnia firmware.** Firmware Virusa jest utworem chronionym prawem autorskim
   Access Music; używaj własnej kopii.
 - Infected **nie jest tworzony, popierany ani wspierany** przez Access Music, Akai Professional / inMusic ani
